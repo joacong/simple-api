@@ -48,6 +48,8 @@ test:
 #
 production:
   <<: *default
-  database: SimpleApi_production
-  username: SimpleApi
+  database: <%= ENV['SIMPLEAPI_DATABASE_NAME'] %>
+  username: <%= ENV['SIMPLEAPI_DATABASE_USER'] %>
   password: <%= ENV['SIMPLEAPI_DATABASE_PASSWORD'] %>
+  host: <%= ENV['SIMPLEAPI_DATABASE_HOST'] %>
+  port: <%= ENV['SIMPLEAPI_DATABASE_PORT'] %>
